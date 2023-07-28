@@ -87,6 +87,7 @@
                 <button onclick="showMessage3()">Click on Me</button>
             </div>
         </section>
+        <canvas id="confettiCanvas"></canvas>
     </main>
 
     <footer>
@@ -112,6 +113,7 @@
         function showMessage1() {
             clickCount++;
             if (clickCount === 1) {
+                createConfetti();
                 window.open('', '_blank').document.write('<h1>You have perfect body construction! Can you be my personal coach for abs and legs?</h1>');
             }
         }
@@ -128,6 +130,45 @@
             if (clickCount === 3) {
                 window.open('', '_blank').document.write('<h1>Wow! You are amazing!</h1>');
             }
+        }
+
+        function createConfetti() {
+            const canvas = document.getElementById('confettiCanvas');
+            const ctx = canvas.getContext('2d');
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const colors = ['#FFC0CB', '#FFD700', '#87CEFA', '#FFA07A', '#20B2AA'];
+
+            function random(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            function confetti() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+                for (let i = 0; i < 50; i++) {
+                    const x = random(0, canvas.width);
+                    const y = random(0, canvas.height);
+                    const w = random(5, 10);
+                    const h = random(10, 20);
+                    const color = colors[Math.floor(random(0, colors.length))];
+
+                    ctx.beginPath();
+                    ctx.arc(x, y, random(5, 10), 0, 2 * Math.PI);
+                    ctx.fillStyle = color;
+                    ctx.fill();
+
+                    ctx.fillRect(x, y, w, h);
+                    ctx.fillStyle = color;
+                    ctx.fill();
+                }
+
+                requestAnimationFrame(confetti);
+            }
+
+            confetti();
         }
     </script>
 </body>
