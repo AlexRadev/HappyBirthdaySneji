@@ -19,18 +19,6 @@
             color: #ff6b6b;
         }
 
-        .birthday-img {
-            font-size: 100px;
-            margin-top: 20px;
-        }
-
-        .birthday-cake {
-            max-width: 300px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
         .birthday-wishes {
             margin-top: 20px;
             font-size: 20px;
@@ -79,11 +67,6 @@
 
     <main>
         <section>
-            <div class="birthday-img">
-                🎈🎈🎈🎈🎈
-            </div>
-            <img src="https://example.com/birthday_cake.jpg" alt="Birthday Cake" class="birthday-cake">
-
             <div class="birthday-wishes">
                 <p>Dear Sneji,</p>
                 <p>Wishing you a day filled with joy, laughter, and all the things that make you happy.</p>
@@ -99,6 +82,9 @@
                 <button onclick="flyBalloons()">Click on Me</button>
                 <button onclick="openGiftsPage()">Open Presents Page</button>
                 <button onclick="showLove()">Show Love</button>
+                <button onclick="showMessage1()">Click on Me</button>
+                <button onclick="showMessage2()">Click on Me</button>
+                <button onclick="showMessage3()">Click on Me</button>
             </div>
         </section>
     </main>
@@ -119,6 +105,29 @@
 
         function showLove() {
             alert('I love you more than anything! ❤️');
+        }
+
+        let clickCount = 0;
+
+        function showMessage1() {
+            clickCount++;
+            if (clickCount === 1) {
+                window.open('', '_blank').document.write('<h1>You have perfect body construction! Can you be my personal coach for abs and legs?</h1>');
+            }
+        }
+
+        function showMessage2() {
+            clickCount++;
+            if (clickCount === 2) {
+                window.open('', '_blank').document.write('<h1>You are very beautiful! Can you be my plastic surgeon?</h1>');
+            }
+        }
+
+        function showMessage3() {
+            clickCount++;
+            if (clickCount === 3) {
+                window.open('', '_blank').document.write('<h1>Wow! You are amazing!</h1>');
+            }
         }
     </script>
 </body>
