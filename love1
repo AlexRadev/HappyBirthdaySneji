@@ -79,7 +79,7 @@
                 🎈🎈🎈🎈🎈
             </div>
             <div class="btn-container">
-                <button onclick="flyBalloons()">Click on Me</button>
+                <button onclick="flyBalloons()">Surprise</button>
                 <button onclick="openGiftsPage()">Open Presents Page</button>
                 <button onclick="showLove()">Show Love</button>
                 <button onclick="showMessage1()">Click on Me</button>
@@ -98,6 +98,7 @@
         function flyBalloons() {
             const balloons = document.querySelector('.balloons');
             balloons.style.animation = 'floatBalloons 3s infinite';
+            createConfetti();
         }
 
         function openGiftsPage() {
@@ -113,7 +114,6 @@
         function showMessage1() {
             clickCount++;
             if (clickCount === 1) {
-                createConfetti();
                 window.open('', '_blank').document.write('<h1>You have perfect body construction! Can you be my personal coach for abs and legs?</h1>');
             }
         }
