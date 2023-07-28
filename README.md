@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +82,7 @@
             <div class="birthday-img">
                 🎈🎈🎈🎈🎈
             </div>
-            <img src="https://example.com/birthday_cake.jpg" alt="Birthday Cake" class="birthday-cake">
+            <img src="path_to_birthday_cake_image.jpg" alt="Birthday Cake" class="birthday-cake">
             <div class="birthday-wishes">
                 <p>Dear Sneji,</p>
                 <p>Wishing you a day filled with joy, laughter, and all the things that make you happy.</p>
